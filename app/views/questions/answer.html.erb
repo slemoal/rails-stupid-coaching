@@ -1,0 +1,21 @@
+<h1>Stupid Coaching</h1>
+
+<% def coach_answer(user_question) %>
+<%   if user_question.downcase == "i am going to work right now!" %>
+<%     "" %>
+<%   elsif user_question.end_with?("?") %>
+<%     "Silly question, get dressed and go to work!" %>
+<%   else %>
+<%     "I don't care, get dressed and go to work!" %>
+<%   end %>
+<% end %>
+
+<div class="output">
+  <p> <i> <%= @answer %> </i> </p>
+  <p>- You</p>
+</div>
+
+<div class="output coach">
+  <p> <i> <%= coach_answer(@answer) %> </i> </p>
+  <p>- Your Coach</p>
+</div>
